@@ -6,7 +6,7 @@
 #    By: amandine <amandine@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:53:09 by amandine          #+#    #+#              #
-#    Updated: 2026/02/04 18:17:56 by amandine         ###   ########.fr        #
+#    Updated: 2026/02/04 18:59:25 by amandine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,13 +100,15 @@ CFLAGS += -Wextra
 CFLAGS += -Wall
 CFLAGS += -g3
 
+LDLIBS := -lreadline
+
 #Rules######################################
 all:
 	$(MAKE) all_libft
 	$(MAKE) $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SOURCES_MINISHELL) $(INCLUDES) $(INCLUDES_LIBFT) $(NAME_LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(SOURCES_MINISHELL) $(INCLUDES) $(INCLUDES_LIBFT) $(NAME_LIBFT) $(LDLIBS) -o $(NAME)
 
 clean: fclean_libft
 
@@ -119,7 +121,7 @@ re: fclean
 all_libft: $(NAME_LIBFT)
 
 $(NAME_LIBFT): $(SOURCES_LIBFT)
-	mkdir ./obj/
+	mkdir -p $(DIR)
 	$(CC) $(CFLAGS) -c $(SOURCES_LIBFT) $(INCLUDES_LIBFT)
 	ar rcs $(NAME_LIBFT) $(OBJ)
 	mv $(OBJ) $(DIR) 
