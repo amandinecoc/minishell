@@ -19,7 +19,7 @@ int main()
         execute_line(line);
         free(line);
     }
-    clear_and_free_line(line);
+    clear_and_free(line);
     return 0;
 }
 ```
