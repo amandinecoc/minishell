@@ -1,5 +1,5 @@
 # New functions
-
+----------
 ## readline : 
 Elle affiche un prompt (chaîne passée en argument), lit une ligne complète depuis l’entrée standard en offrant édition basique (flèches, historique), et renvoie un pointeur vers une nouvelle chaîne allouée contenant tout ce que l’utilisateur a tapé (sans le saut de ligne). Si l’utilisateur envoie EOF (Ctrl+D) ou qu’une erreur survient, la fonction renvoie NULL. Il faut donc libérer la chaîne avec free() après usage.
 
