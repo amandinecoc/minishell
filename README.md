@@ -1,4 +1,4 @@
-# Les grandes étapes
+# Minishell
 ----------
 ## Etape 1
 
