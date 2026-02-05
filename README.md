@@ -8,18 +8,6 @@ On peut l'utiliser dans une boucle infinie.
 
 **Exemple :**
 ```c
-int handling_readline(char *line)
-{}
-
-int parsing_line(char *line)
-{}
-
-int execute_line(char *line)
-{}
-
-int clear_and_free_line(char *line)
-{}
-
 int main()
 {
     char *line;
