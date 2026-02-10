@@ -37,4 +37,5 @@
    * unset sans options
    * env sans options ni arguments
    * exit sans options
+
 La fonction readline() peut provoquer des fuites de mémoire, mais vous n'êtes pas tenu de les corriger. Cependant, cela ne signifie pas que votre propre code, c'est-à-dire le code que vous avez écrit, peut contenir des fuites de mémoire.
