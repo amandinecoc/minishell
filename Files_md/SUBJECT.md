@@ -9,32 +9,32 @@
 * **External functs** : readline, rl_clear_history, rl_on_new_line, rl_replace_line, rl_redisplay, add_history, printf, malloc, free, write, access, open, read, close, fork, wait, waitpid, wait3, wait4, signal, sigaction, sigemptyset, sigaddset, kill, exit, getcwd, chdir, stat, lstat, fstat, unlink, execve, dup, dup2, pipe, opendir, readdir, closedir, strerror, perror, isatty, ttyname, ttyslot, ioctl, getenv, tcsetattr, tcgetattr, tgetent, tgetflag, tgetnum, tgetstr, tgoto, tputs
 
 ### Your shell should:
-* Display a prompt when waiting for a new command.
-* Have a working history.
-* Search and launch the right executable (based on the PATH variable or using a relative or an absolute path).
-* Use at most one global variable to indicate a received signal. Consider the implications: this approach ensures that your signal handler will not access your main data structures.
-* Not interpret unclosed quotes or special characters which are not required by the subject such as \ (backslash) or ; (semicolon).
-* Handle ’ (single quote) which should prevent the shell from interpreting the metacharacters in the quoted sequence.
-* Handle " (double quote) which should prevent the shell from interpreting the metacharacters in the quoted sequence except for $ (dollar sign).
-* Implement the following redirections:
-    * '<' should redirect input.
-    * '>' should redirect output.
-    * '<<' should be given a delimiter, then read the input until a line containing the delimiter is seen. However, it doesn’t have to update the history!
-    * '>>' should redirect output in append mode.
-* Implement pipes (| character). The output of each command in the pipeline is connected to the input of the next command via a pipe.
-* Handle environment variables ($ followed by a sequence of characters) which should expand to their values.
-* Handle $? which should expand to the exit status of the most recently executed foreground pipeline.
-* Handle ctrl-C, ctrl-D and ctrl-\ which should behave like in bash.
-* In interactive mode:
-    * ctrl-C displays a new prompt on a new line.
-    * ctrl-D exits the shell.
-    * ctrl-\ does nothing.
-* Your shell must implement the following built-in commands:
-    * echo with option-n
-    * cd with only a relative or absolute path
-    * pwd with no options
-    * export with no options
-    * unset with no options
-    * env with no options or arguments
-    * exit with no options
-  The readline() function may cause memory leaks, but you are not required to fix them. However, this does not mean your own code, yes the code you wrote, can have memory leaks.
+* Afficher un prompt lors de l'attente d'une nouvelle commande.
+* Conserver un historique des commandes.
+* Rechercher et exécuter le fichier exécutable approprié (en fonction de la variable PATH ou à l'aide d'un chemin relatif ou absolu).
+* Utiliser au maximum une variable globale pour indiquer la réception d'un signal. Attention : cette approche garantit que le gestionnaire de signaux n'accédera pas aux structures de données principales.
+* Ne pas interpréter les guillemets non fermés ni les caractères spéciaux non requis par le sujet, tels que \ (barre oblique inverse) ou ; (point-virgule).
+* Gérer l'apostrophe (') afin d'empêcher l'interpréteur de commandes d'interpréter les métacaractères dans la séquence entre guillemets.
+* Gérer les guillemets doubles (« ») afin d'empêcher l'interpréteur de commandes d'interpréter les métacaractères dans la séquence entre guillemets, à l'exception du signe dollar ($).
+* Implémenter les redirections suivantes :
+   * '<' redirige l'entrée.
+   * '>' redirige la sortie.
+   * '<<' reçoit un délimiteur, puis lit l'entrée jusqu'à rencontrer une ligne contenant ce délimiteur. La mise à jour de l'historique n'est pas nécessaire.
+   * '>>' redirige la sortie en mode ajout.
+* Implémentez les pipes (caractère |). La sortie de chaque commande du pipeline est connectée à l'entrée de la commande suivante via un pipe.
+* Gérez les variables d'environnement ($ suivi d'une séquence de caractères) qui doivent être remplacées par leurs valeurs.
+* Gérez $? qui doit être remplacé par le code de sortie du dernier pipeline exécuté au premier plan.
+* Gérez Ctrl+C, Ctrl+D et Ctrl+\ qui doivent se comporter comme dans Bash.
+* En mode interactif :
+   * Ctrl+C affiche une nouvelle invite sur une nouvelle ligne.
+   * Ctrl+D quitte l’interpréteur de commandes.
+   * Ctrl+\ ne fait rien.
+* Votre shell doit implémenter les commandes intégrées suivantes :
+   * echo avec option-n
+   * cd avec un chemin relatif ou absolu (PATH)
+   * pwd sans options
+   * export sans options
+   * unset sans options
+   * env sans options ni arguments
+   * exit sans options
+La fonction readline() peut provoquer des fuites de mémoire, mais vous n'êtes pas tenu de les corriger. Cependant, cela ne signifie pas que votre propre code, c'est-à-dire le code que vous avez écrit, peut contenir des fuites de mémoire.
