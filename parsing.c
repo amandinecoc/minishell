@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 12:43:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/16 14:25:38 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/16 16:13:44 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int goto_char(char to_find, char *str, int pos)
 {
-    
+    truc
 }
 
 int parsing_minishell(char **argv)
