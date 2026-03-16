@@ -46,9 +46,28 @@ Tokeniser la ligne de commande. Faire en sorte de savoir ce que chaque élément
 {
 struct 
 
-char **cmd 
+int *word_type commande commmade file redirection
+char **line_world 
 int redir
 char *redir
 }
 ```
 ----------
+
+<!-- line[0] = elements[0]
+struc
+cat echo file
+
+typedef enum e_status
+{
+	command,
+	redirection,
+	command_not_found,
+}			t_status;
+
+ str[0]
+file > cat
+file 
+>
+cat -->
+

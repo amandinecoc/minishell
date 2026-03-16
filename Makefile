@@ -6,7 +6,7 @@
 #    By: amandine <amandine@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 21:53:09 by amandine          #+#    #+#              #
-#    Updated: 2026/02/04 18:59:25 by amandine         ###   ########.fr        #
+#    Updated: 2026/03/14 12:44:19 by amandine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SOURCES_LIBFT += libft/ft_substr.c
 SOURCES_LIBFT += libft/ft_atoll.c
 
 SOURCES_MINISHELL += readline.c
+SOURCES_MINISHELL += parsing.c
 
 #Objets#####################################
 

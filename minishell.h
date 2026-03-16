@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:10:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/02/04 18:12:39 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/14 12:44:55 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,7 @@
 
 /* ************************************************************************** */
 /*PARSING*/
-// int			fill_struct_pipex(t_pipex *pipex, char **argv, char **envp);
-// void		create_path(t_pipex *pipex, char **envp);
-// void		access_cmd(t_pipex *data, int num);
-// char		*create_cmd(t_pipex *data, char *cmd);
-// void		print_error(int status);
-// int			pipex(t_pipex *data, char **envp);
-// void		free_pipex(t_pipex *data);
-// void		first_process(t_pipex *data, char **envp, int *pipefd);
-// void		second_process(t_pipex *data, char **envp, int *pipefd);
+
 
 /* ************************************************************************** */
 /*MINISHELL*/
