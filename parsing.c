@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 12:43:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/17 16:42:30 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:01:42 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,20 @@ int check_cote(char *line, int i, int pos)
     return (EXIT_SUCCESS);
 }
 
-int check_false_char_in_line(char *line)
+int check_false_char(char *line, int i, int pos)
+{
+    while (line[i] != '\0')
+    {
+        if (line[i] == 59 || line[i] == 92)
+            return (EXIT_FAILURE);
+        if (line[i] == '"' || line[i] == 39)
+            i = goto_char(line[pos], line, pos);
+        i++;
+    }
+    return (EXIT_SUCCESS);
+}
+
+int check_line(char *line)
 {
     int i;
     int pos;
@@ -51,6 +64,9 @@ int check_false_char_in_line(char *line)
     status = check_cote(line, i, pos);
     if (status != EXIT_SUCCESS)
         return (status);
+    status = check_false_char(line, i, pos);
+    if (status != EXIT_SUCCESS)
+        return (status);
     return (EXIT_SUCCESS);
 }
 
@@ -58,7 +74,7 @@ int parsing_minishell(char *line)
 {
     int status;
     
-    status = check_false_char_in_line(line);
+    status = check_line(line);
     if (status != EXIT_SUCCESS)
         return (status);
     return(EXIT_SUCCESS);

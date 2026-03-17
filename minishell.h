@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:10:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/17 16:42:48 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/17 16:58:50 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,9 @@
 /*PARSING*/
 int parsing_minishell(char *line);
 int goto_char(char to_find, char *str, int pos);
-int check_false_char_in_line(char *line);
+int check_line(char *line);
 int check_cote(char *line, int i, int pos);
+int check_false_char(char *line, int i, int pos);
 
 /* ************************************************************************** */
 /*MINISHELL*/
