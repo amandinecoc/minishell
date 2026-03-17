@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 12:43:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/17 16:09:37 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/17 16:31:04 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int goto_char(char to_find, char *str, int pos)
 {
+    pos++;
     while (str[pos] != '\0')
     {
         if (str[pos] == to_find)
@@ -29,8 +30,6 @@ int parsing_minishell(char *line)
     int pos;
     
     i = 0;
-    if (line = NULL)
-        return (NULL);
     while (line[i] != '\0')
     {
         pos = i;

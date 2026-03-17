@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:52:25 by amandine          #+#    #+#             */
-/*   Updated: 2026/02/10 12:03:52 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/17 16:24:31 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int main()
 {
     char *line;
+    int status;
     
-    while (1)
+    while (1) //ctrl-D fonctionne avec cette boucle : while ((line = readline("minishell> ")) != NULL)
     {
         line = readline("minishell>");
         if (line != NULL)
@@ -25,6 +26,13 @@ int main()
         {
             rl_clear_history();
             printf("Historique effacé.\n");
+        }
+        status = parsing_minishell(line);
+        if (status != EXIT_SUCCESS)
+        {
+            printf("error_parsing\n"); //printf status error autre fonction
+            free(line);
+            break;
         }
         printf("Vous avez tapé: %s\n", line);
         free(line);
