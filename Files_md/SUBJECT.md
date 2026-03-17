@@ -16,7 +16,7 @@
 * Ne pas interpréter les guillemets non fermés ni les caractères spéciaux non requis par le sujet, tels que \ (barre oblique inverse) ou ; (point-virgule).
 * Gérer l'apostrophe (') afin d'empêcher l'interpréteur de commandes d'interpréter les métacaractères dans la séquence entre guillemets.
 * Gérer les guillemets doubles (« ») afin d'empêcher l'interpréteur de commandes d'interpréter les métacaractères dans la séquence entre guillemets, à l'exception du signe dollar ($).
-* Si tu croises $ dans "" fait l expand variable d environnement, mais pas pour $ dans ''.
+* //Si tu croises $ dans "" fait l expand variable d environnement, mais pas pour $ dans ''.//
 * Implémenter les redirections suivantes :
    * '<' redirige l'entrée.
    * '>' redirige la sortie.
