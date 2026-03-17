@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/14 12:43:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/16 14:25:38 by amandine         ###   ########.fr       */
+/*   Updated: 2026/03/17 16:08:19 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,33 @@
 
 int goto_char(char to_find, char *str, int pos)
 {
-    
+    while (str[pos] != '\0')
+    {
+        if (str[pos] == to_find)
+            return (pos);
+        pos++;
+    }
+    return (pos);
 }
 
-int parsing_minishell(char **argv)
+int parsing_minishell(char *line)
 {
     int i;
+    int pos;
     
     i = 0;
-    if (argv = NULL)
-        return (rien);
-    while ()
+    if (line = NULL)
+        return (NULL);
+    while (line[i] != '\0')
     {
-        if (goto_char(to_find, str, pos) == )
+        pos = i;
+        if (line[i] == '"' || line[i] == 39)
+        {
+            i = goto_char(line[pos], line, pos);
+            if (line[i] == '\0')
+                return (EXIT_FAILURE); //faire enum error cote seule
+        }
+        i++;
     }
-    
+    return (EXIT_SUCCESS);
 }
