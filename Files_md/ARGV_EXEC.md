@@ -1,5 +1,8 @@
 # Arguments executable
 ----------
+## Documentations :
+https://medium.com/@mostafa.omrane/mes-conseils-si-je-devais-recommencer-minishell-a9783c51ba1b
+
 ## Bash Reference Manual : 
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.pdf
 
