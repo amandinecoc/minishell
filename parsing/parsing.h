@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 21:05:01 by amandine          #+#    #+#             */
-/*   Updated: 2026/04/02 21:15:09 by amandine         ###   ########.fr       */
+/*   Updated: 2026/04/02 21:28:19 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef enum e_status
 // }			t_pipex;
 
 /* ************************************************************************** */
-/*PARSING_QUOTES*/
+/*PARSING*/
 int parsing_minishell(char *line);
 int goto_char(char to_find, char *str, int pos);
 int check_line(char *line);
