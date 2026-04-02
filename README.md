@@ -54,6 +54,8 @@ char *redir
 ```
 ----------
 
+- créer la liste de token
+- identifier le type de chaque token
 <!-- line[0] = elements[0]
 struc
 cat echo file

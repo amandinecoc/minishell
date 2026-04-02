@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 18:10:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/04/02 21:19:54 by amandine         ###   ########.fr       */
+/*   Created: 2026/04/02 21:05:01 by amandine          #+#    #+#             */
+/*   Updated: 2026/04/02 21:15:09 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#ifndef PARSING_H
+# define PARSING_H
 
 /* ************************************************************************** */
 /*INCLUDES*/
-# include "libft/libft.h"
-# include "parsing/parsing.h"
-# include "bultin/bultin.h"
-# include "exec/exec.h"
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <sys/types.h>
-# include <sys/wait.h>
-# include <unistd.h>
-# include <readline/readline.h>
-# include <readline/history.h>
+
 
 /* ************************************************************************** */
 /*TYPEDEF*/
-// typedef enum e_status
-// {
-// 	Success,
-// 	malloc_failure,
-// 	command_not_found,
-// }			t_status;
+typedef enum e_status
+{
+	error_open_cote,
+	error,
+	empty,
+}			t_status;
 
 // typedef struct s_pipex
 // {
@@ -50,6 +38,14 @@
 // }			t_pipex;
 
 /* ************************************************************************** */
-/*MINISHELL*/
+/*PARSING_QUOTES*/
+int parsing_minishell(char *line);
+int goto_char(char to_find, char *str, int pos);
+int check_line(char *line);
+int check_cote(char *line, int i, int pos);
+int check_false_char(char *line, int i, int pos);
+
+/* ************************************************************************** */
+/*PARSING_*/
 
 #endif
