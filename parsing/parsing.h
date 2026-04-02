@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 21:05:01 by amandine          #+#    #+#             */
-/*   Updated: 2026/04/02 21:36:48 by amandine         ###   ########.fr       */
+/*   Updated: 2026/04/02 21:44:12 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,18 @@ typedef enum e_status
 	Empty,
 }			t_status;
 
-// typedef struct s_pipex
-// {
-// 	char	*file1;
-// 	char	*cmd1;
-// 	char	*file2;
-// 	char	*cmd2;
-// 	char	**tab_cmd1;
-// 	char	**tab_cmd2;
-// 	char	**tab_path;
-// }			t_pipex;
-
 /* ************************************************************************** */
-/*PARSING*/
-int parsing_minishell(char *line);
-int goto_char(char to_find, char *str, int pos);
+/*CHECK_LINE*/
 int check_line(char *line);
 int check_quote(char *line, int i, int pos);
 int check_wrong_char(char *line, int i, int pos);
 
 /* ************************************************************************** */
-/*PARSING_*/
+/*UTILS_PARSING*/
+int goto_char(char to_find, char *str, int pos);
+
+/* ************************************************************************** */
+/*PARSING*/
+int parsing_minishell(char *line);
 
 #endif
