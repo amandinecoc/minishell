@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   readline.c                                         :+:      :+:    :+:   */
+/*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 17:52:25 by amandine          #+#    #+#             */
-/*   Updated: 2026/03/17 16:24:31 by amandine         ###   ########.fr       */
+/*   Updated: 2026/04/02 21:38:49 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
             printf("Historique effacé.\n");
         }
         status = parsing_minishell(line);
-        if (status != EXIT_SUCCESS)
+        if (status != Success)
         {
             printf("error_parsing\n"); //printf status error autre fonction
             free(line);

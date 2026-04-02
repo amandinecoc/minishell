@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 18:10:56 by amandine          #+#    #+#             */
-/*   Updated: 2026/04/02 21:19:54 by amandine         ###   ########.fr       */
+/*   Updated: 2026/04/02 21:38:42 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,7 @@
 
 /* ************************************************************************** */
 /*TYPEDEF*/
-// typedef enum e_status
-// {
-// 	Success,
-// 	malloc_failure,
-// 	command_not_found,
-// }			t_status;
 
-// typedef struct s_pipex
-// {
-// 	char	*file1;
-// 	char	*cmd1;
-// 	char	*file2;
-// 	char	*cmd2;
-// 	char	**tab_cmd1;
-// 	char	**tab_cmd2;
-// 	char	**tab_path;
-// }			t_pipex;
 
 /* ************************************************************************** */
 /*MINISHELL*/
