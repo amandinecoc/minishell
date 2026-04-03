@@ -6,7 +6,7 @@
 /*   By: amandine <amandine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 21:05:01 by amandine          #+#    #+#             */
-/*   Updated: 2026/04/03 19:01:12 by amandine         ###   ########.fr       */
+/*   Updated: 2026/04/03 21:10:18 by amandine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int			goto_char(char to_find, char *str, int pos);
 /* ************************************************************************** */
 /*PARSING*/
 int			parsing_minishell(char *line, char **envp);
-int			fill_struct_parsing(char *line, t_parsing *data_parsing,
-				char **envp);
+int			fill_struct_parsing(char *line, t_parsing *data_parsing);
 
 #endif
